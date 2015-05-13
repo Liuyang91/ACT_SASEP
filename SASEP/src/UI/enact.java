@@ -179,13 +179,13 @@ public class enact {
 			      stream.close();
 			     } catch (IOException e1) {
 			      MessageBox box = new MessageBox(shell, SWT.ICON_ERROR);
-			      box.setMessage("���ļ�����\n" + name);
+			      box.setMessage("Cannot open!\n" + name);
 			      box.open();
 			      return;
 			     }
 			    } catch (FileNotFoundException e2) {
 			     MessageBox box = new MessageBox(shell, SWT.ICON_ERROR);
-			     box.setMessage("�ļ�δ�ҵ���\n" + name);
+			     box.setMessage("Not Found!\n" + name);
 			     box.open();
 			     return;
 			    }

@@ -226,21 +226,6 @@ public class Form_Phy extends Dialog {
 						button.setImage(SWTResourceManager.getImage(text_5.getText()));
 					button.setBounds(10, 45, 100, 100);
 
-					/*final Button btnView = new Button(group, SWT.CHECK);
-					btnView.addSelectionListener(new SelectionAdapter() {
-						@Override
-						public void widgetSelected(SelectionEvent e) {
-							if(btnView.getSelection())
-							{
-								button.setEnabled(false);
-							}
-							else
-								button.setEnabled(true);
-						}
-					});
-					btnView.setBounds(10, 21, 98, 18);
-					btnView.setText("View");*/
-
 					Label lblState = new Label(group, SWT.NONE);
 					lblState.setBounds(10, 151, 37, 17);
 					lblState.setText("State:");

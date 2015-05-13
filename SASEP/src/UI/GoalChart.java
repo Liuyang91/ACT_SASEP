@@ -92,14 +92,6 @@ public class GoalChart extends Dialog {
         // adjust the axis range
         chart.getAxisSet().adjustRange();
 
-        // add paint listener to draw threshold
-       /* chart.getPlotArea().addPaintListener(new PaintListener() {
-            public void paintControl(PaintEvent e) {
-                int y = yAxis.getPixelCoordinate(0.65);
-                e.gc.drawLine(0, y, e.width, y);
-                e.gc.drawText("y=0.65", MARGIN, y + MARGIN);
-            }
-        });*/
 	}
 }
 

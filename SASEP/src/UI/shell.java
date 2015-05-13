@@ -216,23 +216,23 @@ public class shell {
 		text_weather.setBounds(63, 49, 52, 23);
 		
 		btnSomebody_1 = new Button(composite_phy_con, SWT.BORDER);
-		btnSomebody_1.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\somebody.jpg"));
+		btnSomebody_1.setImage(SWTResourceManager.getImage(".\\imagePF\\somebody.jpg"));
+		System.out.println(System.getProperty("user.dir"));
 		btnSomebody_1.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if(flag_man == 0){
-					btnSomebody_1.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\nobody.jpg"));
+				if (flag_man == 0) {
+					btnSomebody_1.setImage(SWTResourceManager.getImage(".\\imagePF\\nobody.jpg"));
 					flag_man = 1;
-					client.setResValue("somebodyhome",0);
-					if (timerAction!=null) {
+					client.setResValue("somebodyhome", 0);
+					if (timerAction != null) {
 						timerAction.put_value(null, "somebodyhome", 0);
 					}
-				}
-				else{
-					btnSomebody_1.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\somebody.jpg"));
+				} else {
+					btnSomebody_1.setImage(SWTResourceManager.getImage(".\\imagePF\\somebody.jpg"));
 					flag_man = 0;
-					client.setResValue("somebodyhome",1);
-					if (timerAction!=null) {
+					client.setResValue("somebodyhome", 1);
+					if (timerAction != null) {
 						timerAction.put_value(null, "somebodyhome", 1);
 					}
 				}
@@ -319,7 +319,7 @@ public class shell {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_ChuangLian == 0){
-					button.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\guanchl.jpg"));
+					button.setImage(SWTResourceManager.getImage(".\\imagePF\\guanchl.jpg"));
 					flag_ChuangLian = 1;
 					txtOn.setText("Off");
 					client.setResValue("window",0);
@@ -328,7 +328,7 @@ public class shell {
 					}
 				}
 				else{
-					button.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\kaichl.jpg"));
+					button.setImage(SWTResourceManager.getImage(".\\imagePF\\kaichl.jpg"));
 					flag_ChuangLian = 0;
 					txtOn.setText("On");
 					client.setResValue("window",1);
@@ -339,7 +339,7 @@ public class shell {
 			}
 		});
 
-		button.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\kaichl.jpg"));
+		button.setImage(SWTResourceManager.getImage(".\\imagePF\\kaichl.jpg"));
 		button.setBounds(10, 45, 100, 100);
 		
 		Label lblState = new Label(grpWindow, SWT.NONE);
@@ -357,12 +357,12 @@ public class shell {
 
 		
 		button_2 = new Button(grpBlind, SWT.BORDER);
-		button_2.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\blindoff.jpg"));
+		button_2.setImage(SWTResourceManager.getImage(".\\imagePF\\blindoff.jpg"));
 		button_2.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_blind == 0){
-					button_2.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\blindon.jpg"));
+					button_2.setImage(SWTResourceManager.getImage(".\\imagePF\\blindon.jpg"));
 					flag_blind = 1;
 					txtOff.setText("On");
 					client.setResValue("blind",1);
@@ -371,7 +371,7 @@ public class shell {
 					}
 				}
 				else{
-					button_2.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\blindoff.jpg"));
+					button_2.setImage(SWTResourceManager.getImage(".\\imagePF\\blindoff.jpg"));
 					flag_blind = 0;
 					txtOff.setText("Off");
 					client.setResValue("blind",0);
@@ -398,12 +398,12 @@ public class shell {
 		
 		
 		button_4 = new Button(grpLight, SWT.BORDER);
-		button_4.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\kaideng.jpg"));
+		button_4.setImage(SWTResourceManager.getImage(".\\imagePF\\kaideng.jpg"));
 		button_4.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_Light == 0){
-					button_4.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\guandeng.jpg"));
+					button_4.setImage(SWTResourceManager.getImage(".\\imagePF\\guandeng.jpg"));
 					flag_Light = 1;
 					text_3.setText("Off");
 					client.setResValue("light.power",0);
@@ -412,7 +412,7 @@ public class shell {
 					}
 				}
 				else{
-					button_4.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\kaideng.jpg"));
+					button_4.setImage(SWTResourceManager.getImage(".\\imagePF\\kaideng.jpg"));
 					flag_Light = 0;
 					text_3.setText("On");
 					client.setResValue("light.power",1);
@@ -438,12 +438,12 @@ public class shell {
 		grpHeater.setBounds(520, 10, 150, 179);
 		
 		button_5 = new Button(grpHeater, SWT.NONE);
-		button_5.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\heateroff.jpg"));
+		button_5.setImage(SWTResourceManager.getImage(".\\imagePF\\heateroff.jpg"));
 		button_5.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_Heater == 0){
-					button_5.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\heateron.jpg"));
+					button_5.setImage(SWTResourceManager.getImage(".\\imagePF\\heateron.jpg"));
 					flag_Heater = 1;
 					txtOff_1.setText("On");
 					client.setResValue("heater",1);
@@ -452,7 +452,7 @@ public class shell {
 					}
 				}
 				else{
-					button_5.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\heateroff.jpg"));
+					button_5.setImage(SWTResourceManager.getImage(".\\imagePF\\heateroff.jpg"));
 					flag_Heater = 0;
 					txtOff_1.setText("Off");
 					client.setResValue("heater",0);
@@ -478,12 +478,12 @@ public class shell {
 		grpComputer.setText("Computer");
 		
 		button_7 = new Button(grpComputer, SWT.NONE);
-		button_7.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\pcclose.jpg"));
+		button_7.setImage(SWTResourceManager.getImage(".\\imagePF\\pcclose.jpg"));
 		button_7.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_pc == 0){
-					button_7.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\pcopen.jpg"));
+					button_7.setImage(SWTResourceManager.getImage(".\\imagePF\\pcopen.jpg"));
 					flag_pc = 1;
 					txtOff_2.setText("On");
 					client.setResValue("computer.power",1);
@@ -492,7 +492,7 @@ public class shell {
 					}
 				}
 				else{
-					button_7.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\pcclose.jpg"));
+					button_7.setImage(SWTResourceManager.getImage(".\\imagePF\\pcclose.jpg"));
 					flag_pc = 0;
 					txtOff_2.setText("Off");
 					client.setResValue("computer.power",0);
@@ -536,12 +536,12 @@ public class shell {
 		grpAircon.setBounds(180, 202, 150, 214);
 		
 		button_9 = new Button(grpAircon, SWT.NONE);
-		button_9.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\airclose.jpg"));
+		button_9.setImage(SWTResourceManager.getImage(".\\imagePF\\airclose.jpg"));
 		button_9.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_air == 0){
-					button_9.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\airopen.jpg"));
+					button_9.setImage(SWTResourceManager.getImage(".\\imagePF\\airopen.jpg"));
 					flag_air = 1;
 					txtOff_3.setText("On");
 					client.setResValue("aircondition.power",1);
@@ -550,7 +550,7 @@ public class shell {
 					}
 				}
 				else{
-					button_9.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\airclose.jpg"));
+					button_9.setImage(SWTResourceManager.getImage(".\\imagePF\\airclose.jpg"));
 					flag_air = 0;
 					txtOff_3.setText("Off");
 					client.setResValue("aircondition.power",0);
@@ -580,7 +580,7 @@ public class shell {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_tem == 0){
-					button_11.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\heat.jpg"));
+					button_11.setImage(SWTResourceManager.getImage(".\\imagePF\\heat.jpg"));
 					flag_tem = 1;
 					client.setResValue("aircondition.mode","heat");
 					if (timerAction!=null) {
@@ -588,7 +588,7 @@ public class shell {
 					}
 				}
 				else{
-					button_11.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\cool.jpg"));
+					button_11.setImage(SWTResourceManager.getImage(".\\imagePF\\cool.jpg"));
 					flag_tem = 0;
 					client.setResValue("aircondition.mode","cool");
 					if (timerAction!=null) {
@@ -597,7 +597,7 @@ public class shell {
 				}
 			}
 		});
-		button_11.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\cool.jpg"));
+		button_11.setImage(SWTResourceManager.getImage(".\\imagePF\\cool.jpg"));
 		button_11.setBounds(60, 179, 35, 35);
 		
 		final Group grpTv = new Group(composite_dev_con, SWT.NONE);
@@ -605,12 +605,12 @@ public class shell {
 		grpTv.setBounds(351, 202, 150, 214);
 		
 		button_12 = new Button(grpTv, SWT.NONE);
-		button_12.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\tvoff.jpg"));
+		button_12.setImage(SWTResourceManager.getImage(".\\imagePF\\tvoff.jpg"));
 		button_12.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				if(flag_TV == 0){
-					button_12.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\tvon.jpg"));
+					button_12.setImage(SWTResourceManager.getImage(".\\imagePF\\tvon.jpg"));
 					flag_TV = 1;
 					txtOff_4.setText("On");
 					client.setResValue("tv.power",1);
@@ -619,7 +619,7 @@ public class shell {
 					}
 				}
 				else{
-					button_12.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\tvoff.jpg"));
+					button_12.setImage(SWTResourceManager.getImage(".\\imagePF\\tvoff.jpg"));
 					flag_TV = 0;
 					txtOff_4.setText("Off");
 					client.setResValue("tv.power",0);
@@ -702,7 +702,7 @@ public class shell {
 		text_4.setText("3");
 		text_4.setBounds(63, 94, 52, 23);
 		//Sample
-		/*grpAircon.setVisible(false);
+		grpAircon.setVisible(false);
 		grpBlind.setVisible(false);
 		grpComputer.setVisible(false);
 		grpHeater.setVisible(false);
@@ -736,12 +736,11 @@ public class shell {
 
 		lblAddPhyresHere.setVisible(true);
 		lblAddDevresHere.setVisible(true);
-		lblAddPropertiesHere.setVisible(true);*/
-		lblAddPhyresHere.setVisible(false);
-		lblAddDevresHere.setVisible(false);
-		lblAddPropertiesHere.setVisible(false);
-		//composite_phy_con.setVisible(false);
-		//composite_pro_con.setVisible(false);
+		lblAddPropertiesHere.setVisible(true);
+		lblAddPhyresHere.setVisible(true);
+		lblAddDevresHere.setVisible(true);
+		lblAddPropertiesHere.setVisible(true);
+
 		//~Sample
 
 		MenuItem mntmSample = new MenuItem(menu_1, SWT.CHECK);
@@ -822,7 +821,6 @@ public class shell {
 					grpLight.setVisible(true);
 					grpTv.setVisible(true);
 					grpWindow.setVisible(true);
-					//composite_dev_con.layout();
 				}
 			}
 		});
@@ -946,11 +944,6 @@ public class shell {
 		btnNewButton.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-//				shell.clock_step = Integer.parseInt(text_8.getText());
-//				shell.timer.cancel();
-//				shell.timer = new java.util.Timer();
-//				TimerAction myTask = new TimerAction();
-//				shell.timer.schedule(myTask, 1000, shell.clock_step);
 				clock_step = Integer.parseInt(text_2.getText());
 			}
 		});
@@ -961,40 +954,7 @@ public class shell {
 		btnStartclock.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				//client.reset_res_pool();
-				/*new Thread(new Runnable() {
-					@Override
-					public void run() {
-						ProcessBuilder pb = new ProcessBuilder()
-								.directory(new File("C:\\Users\\admin\\Documents\\GitHub\\AeroAnt\\ResPool"))
-								.command(new String[]{"python", "res_pool.py"});
-						pb.redirectErrorStream(true);
-						try {
-							Process process = pb.start();
-							BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
-							String line;
-							while((line = br.readLine())!=null) {System.out.println(line);
 
-								//System.out.flush();
-							}
-							//System.out.print("output:" + process.exitValue());
-
-						} catch (IOException e1) {
-							e1.printStackTrace();
-						}
-					}
-				}).start();
-*/
-
-/*				try {
-					Runtime.getRuntime().exec("cmd.exe /C cd C:\\\\Users\\\\admin\\\\Documents\\\\GitHub\\\\AeroAnt;python init_res.py");
-					//Runtime.getRuntime().exec("C:\\Users\\admin\\Documents\\GitHub\\AeroAnt\\ResPool\\res_pool.py");
-					//Runtime.getRuntime().exec("C:\\Users\\admin\\Documents\\GitHub\\AeroAnt\\test_agent.py");
-					//Runtime.getRuntime().exec("python init_res.py");
-					System.out.print("Fooooooooooooo");
-				} catch (IOException e1) {
-					e1.printStackTrace();System.out.print("shit");
-				}*/
 				startClock(null);
 			}
 		});
@@ -1043,7 +1003,7 @@ public class shell {
 					@Override
 					public void run() {
 						ProcessBuilder pb = new ProcessBuilder()
-								.directory(new File("C:\\Users\\admin\\Documents\\GitHub\\AeroAnt\\ResPool"))
+								.directory(new File("..\\AeroAnt\\ResPool"))
 								.command(new String[]{"python", "res_pool.py"});
 						pb.redirectErrorStream(true);
 						try {
@@ -1052,10 +1012,7 @@ public class shell {
 							String line;
 							while((line = br.readLine())!=null) {System.out.println(line);
 
-								//System.out.flush();
 							}
-							//System.out.print("output:" + process.exitValue());
-
 						} catch (IOException e1) {
 							e1.printStackTrace();
 						}
@@ -1074,7 +1031,7 @@ public class shell {
 					@Override
 					public void run() {
 						ProcessBuilder pb = new ProcessBuilder()
-								.directory(new File("C:\\Users\\admin\\Documents\\GitHub\\AeroAnt"))
+								.directory(new File("..\\AeroAnt"))
 								.command(new String[]{"python", "test_agent.py"});
 						pb.redirectErrorStream(true);
 						try {
@@ -1105,7 +1062,7 @@ public class shell {
 					@Override
 					public void run() {
 						ProcessBuilder pb = new ProcessBuilder()
-								.directory(new File("C:\\Users\\admin\\Documents\\GitHub\\AeroAnt"))
+								.directory(new File("..\\AeroAnt"))
 								.command(new String[]{"python", "init_res.py"});
 						pb.redirectErrorStream(true);
 						try {
@@ -1113,10 +1070,7 @@ public class shell {
 							BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
 							String line;
 							while((line = br.readLine())!=null) {System.out.println(line);
-
-								//System.out.flush();
 							}
-							//System.out.print("output:" + process.exitValue());
 
 						} catch (IOException e1) {
 							e1.printStackTrace();
@@ -1174,15 +1128,11 @@ public class shell {
 		TableCursor tableCursor = new TableCursor(table, SWT.NONE);
 		TableItem[] items = table.getItems();
 		for (int i = 0; i < items.length; i++) {
-			// 第一列设置，创建TableEditor对象
+			
 			final TableEditor editor = new TableEditor(table);
-			// 创建一个文本框，用于输入文字
 			final Text text = new Text(table, SWT.NONE);
-			// 将文本框当前值，设置为表格中的值
 			text.setText(items[i].getText(1));
-			// 设置编辑单元格水平填充
 			editor.grabHorizontal = true;
-			// 关键方法，将编辑单元格与文本框绑定到表格的第一列
 			editor.setEditor(text, items[i],1);
 			text.addModifyListener(new ModifyListener()
 			{

@@ -24,19 +24,6 @@ import java.util.Timer;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.List;
 
-/*public class TimerAction implements Runnable{
-        public void run() {
-            try{
-                Date date = new Date();
-                DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-                shell.text_8.setText(dateFormat.format(date));//宸插畾涔夌殑鐢ㄤ簬鏄剧ず鏃堕挓鐨刲abel
-                shell.text_7.setText(String.valueOf(shell.testInt));
-                shell.testInt++;
-                shell.display.timerExec(1000, this);
-            }catch(Exception e){}
-        }
-
-}*/
 
 public class TimerAction extends TimerTask{
 
@@ -107,30 +94,6 @@ public class TimerAction extends TimerTask{
             @Override
             public void run() {
                 try{
-                    /*Date date = new Date();
-                    DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-                    shell.text_1.setText(dateFormat.format(date));//宸插畾涔夌殑鐢ㄤ簬鏄剧ず鏃堕挓鐨刲abel
-                    shell.text_2.setText(String.valueOf(shell.testInt));
-                    shell.testInt = shell.testInt+1;*/
-
-//                    int t = shell.client.getResValue("temperature", -1, Integer.class);
-                    //shell.client.ticktock(1);
-
-//                    shell.text_tem.setText(String.valueOf(shell.client.getResValue("temperature", shell.clock)));
-//                    shell.text_bri.setText(String.valueOf(shell.client.getResValue("brightness", shell.clock)));
-//                    shell.text_hum.setText(String.valueOf(shell.client.getResValue("humidity", shell.clock)));
-//                    shell.text_vol.setText(String.valueOf(shell.client.getResValue("volume", shell.clock)));
-//                    shell.text_1.setText(String.valueOf(shell.clock));
-//                    shell.text_vol.setText(String.valueOf(shell.client.getResValue("power", shell.clock)));
-//                    shell.text_air.setText(String.valueOf(shell.client.getResValue("airquality", shell.clock)));
-//                    shell.combo.setText(String.valueOf(shell.client.getResValue("season", shell.clock)));
-//                    shell.combo_1.setText(String.valueOf(shell.client.getResValue("weather", shell.clock)));
-//                    shell.lblNewLabel.setText(String.valueOf(shell.client.getResValue("time", shell.clock)));
-//                  //  shell.text_8.setText(String.valueOf(shell.client.getResValue("somebodyhome", shell.clock)));
-//                    shell.text_13.setText(String.valueOf(shell.client.getResValue("computer.brightness", shell.clock)));
-//                    shell.txtVol.setText(String.valueOf(shell.client.getResValue("computer.volume", shell.clock)));
-//                    shell.text_14.setText(String.valueOf(shell.client.getResValue("tv.brightness", shell.clock)));
-//                    shell.txtVol_1.setText(String.valueOf(shell.client.getResValue("tv.volume", shell.clock)));
 
                     shell.text_1.setText(String.valueOf(shell.clock));
                     
@@ -229,9 +192,9 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (t == 0) {
-                shell.btnSomebody_1.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\nobody.jpg"));
+                shell.btnSomebody_1.setImage(SWTResourceManager.getImage(".\\imagePF\\nobody.jpg"));
             } else {
-                shell.btnSomebody_1.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\somebody.jpg"));
+                shell.btnSomebody_1.setImage(SWTResourceManager.getImage(".\\imagePF\\somebody.jpg"));
             }
         }
         if(name.equals("window")){
@@ -242,10 +205,10 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (t == 0) {
-                shell.button.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\guanchl.jpg"));
+                shell.button.setImage(SWTResourceManager.getImage(".\\imagePF\\guanchl.jpg"));
                 shell.txtOn.setText("Off");
             } else {
-                shell.button.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\kaichl.jpg"));
+                shell.button.setImage(SWTResourceManager.getImage(".\\imagePF\\kaichl.jpg"));
                 shell.txtOn.setText("On");
             }
         }
@@ -257,10 +220,10 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (t == 0) {
-                shell.button_2.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\blindoff.jpg"));
+                shell.button_2.setImage(SWTResourceManager.getImage(".\\imagePF\\blindoff.jpg"));
                 shell.txtOff.setText("Off");
             } else {
-                shell.button_2.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\blindon.jpg"));
+                shell.button_2.setImage(SWTResourceManager.getImage(".\\imagePF\\blindon.jpg"));
                 shell.txtOff.setText("On");
             }
         }
@@ -272,10 +235,10 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (t == 0) {
-                shell.button_4.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\guandeng.jpg"));
+                shell.button_4.setImage(SWTResourceManager.getImage(".\\imagePF\\guandeng.jpg"));
                 shell.text_3.setText("Off");
             } else {
-                shell.button_4.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\kaideng.jpg"));
+                shell.button_4.setImage(SWTResourceManager.getImage(".\\imagePF\\kaideng.jpg"));
                 shell.text_3.setText("On");
             }
         }
@@ -287,10 +250,10 @@ public class TimerAction extends TimerTask{
               //  return;
             }
             if (t == 0) {
-                shell.button_5.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\heateroff.jpg"));
+                shell.button_5.setImage(SWTResourceManager.getImage(".\\imagePF\\heateroff.jpg"));
                 shell.txtOff_1.setText("Off");
             } else {
-                shell.button_5.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\heateron.jpg"));
+                shell.button_5.setImage(SWTResourceManager.getImage(".\\imagePF\\heateron.jpg"));
                 shell.txtOff_1.setText("On");
             }
         }
@@ -302,10 +265,10 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (t == 0) {
-                shell.button_7.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\pcclose.jpg"));
+                shell.button_7.setImage(SWTResourceManager.getImage(".\\imagePF\\pcclose.jpg"));
                 shell.txtOff_2.setText("Off");
             } else {
-                shell.button_7.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\pcopen.jpg"));
+                shell.button_7.setImage(SWTResourceManager.getImage(".\\imagePF\\pcopen.jpg"));
                 shell.txtOff_2.setText("On");
             }
         }
@@ -317,10 +280,10 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (t == 0) {
-                shell.button_9.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\airclose.jpg"));
+                shell.button_9.setImage(SWTResourceManager.getImage(".\\imagePF\\airclose.jpg"));
                 shell.txtOff_3.setText("Off");
             } else {
-                shell.button_9.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\airopen.jpg"));
+                shell.button_9.setImage(SWTResourceManager.getImage(".\\imagePF\\airopen.jpg"));
                 shell.txtOff_3.setText("On");            }
         }
         if(name.equals("aircondition.mode")){
@@ -331,9 +294,9 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (s.equals("cool")) {
-                shell.button_11.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\cool.jpg"));
+                shell.button_11.setImage(SWTResourceManager.getImage(".\\imagePF\\cool.jpg"));
             } else {
-                shell.button_11.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\heat.jpg"));
+                shell.button_11.setImage(SWTResourceManager.getImage(".\\imagePF\\heat.jpg"));
             }
         }
         if(name.equals("tv.power")){
@@ -344,10 +307,10 @@ public class TimerAction extends TimerTask{
                // return;
             }
             if (t == 0) {
-                shell.button_12.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\tvoff.jpg"));
+                shell.button_12.setImage(SWTResourceManager.getImage(".\\imagePF\\tvoff.jpg"));
                 shell.txtOff_4.setText("Off");
             } else {
-                shell.button_12.setImage(SWTResourceManager.getImage("E:\\MyEclipse\\pfUI\\imagePF\\tvon.jpg"));
+                shell.button_12.setImage(SWTResourceManager.getImage(".\\imagePF\\tvon.jpg"));
                 shell.txtOff_4.setText("On");            }
         }
     }

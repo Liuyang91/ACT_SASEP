@@ -100,7 +100,6 @@ public class Form_Specification extends Dialog {
 				     box.open();
 				     return;
 				    }
-				    //text.setText(textString);
 			}
 		});
 		btnBrowse.setBounds(275, 58, 80, 25);
