@@ -876,11 +876,28 @@ public class shell {
 		mntmReadMe.setMenu(menu_3);
 		
 		MenuItem mntmAbout = new MenuItem(menu_3, SWT.NONE);
+		mntmAbout.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				MessageBox box = new MessageBox(shell, SWT.ICON_INFORMATION);
+				box.setMessage("Auth. : ACT Team, PKU");
+				box.open();
+			}
+		});
 		mntmAbout.setText("About");
 		
 		new MenuItem(menu_3, SWT.SEPARATOR);
 		
 		MenuItem mntmReadme = new MenuItem(menu_3, SWT.NONE);
+		mntmReadme.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				MessageBox box = new MessageBox(shell, SWT.ICON_INFORMATION);
+				box.setMessage("SASEP(Self-Adaptation system Simulation and Evaluation Platform) is a visualization tool which helps users construct self-adaptive software systems, then simulates and evaluates \nthe running of them, according to specifications.");
+			
+				box.open();
+			}
+		});
 		mntmReadme.setText("Read_me");
 		
 		Label label = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
