@@ -1,4 +1,4 @@
-package UI;
+﻿package UI;
 
 import com.skyspace.client.ResPoolClient;
 
@@ -894,7 +894,6 @@ public class shell {
 			public void widgetSelected(SelectionEvent e) {
 				MessageBox box = new MessageBox(shell, SWT.ICON_INFORMATION);
 				box.setMessage("SASEP(Self-Adaptation system Simulation and Evaluation Platform) is a visualization tool which helps users construct self-adaptive software systems, then simulates and evaluates \nthe running of them, according to specifications.");
-			
 				box.open();
 			}
 		});
